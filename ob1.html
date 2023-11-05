@@ -1,0 +1,61 @@
+<html> 
+    <head>
+        <title> Obstacle 1 </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+    <body>
+        <h1> Solve this First Obstacle! </h1>
+        <p> 
+            Prepare to confront your first chilling challenge. Step into the foreboding obstacle ahead, where you must decipher a sinister puzzle to unlock your path forward.</p>
+        <div class="haunted house">
+          <img class=scary_house_img src="ob1_img.jpg"> 
+          <p> Please hear out this instruction: </p>
+          <audio src="audio2.mp3" controls> </audio>
+        </div>
+        <br> <br>
+        <button onclick="fun()" class="button1"> Click this button to begin your puzzle! </button>
+        <br> <br>
+        <button id="myButton" class="button1"><a href="ob2.html"> Click this button to enter the next obstacle! </a></button>
+        <style>
+            #myButton 
+            {
+            display: none; 
+            margin-left: 900px;
+            background-color: yellow;
+            color: white;
+            }
+        </style>
+        <script>
+            function fun()
+            {
+            alert("Guess a random number between 1-100.");
+            var number = Math.floor(Math.random() * 101);
+            alert("Random number is " + number);
+            while(true)
+            {
+            var guess = parseInt(prompt("Guess a number!"));
+            if (number === guess)
+              {
+                alert("Congrulations! You got the random number!");
+                alert("Click OK to unlock the door! A blue button shall appear, which will ask you to head on to the next obstacle!");
+                document.getElementById("myButton").style.display = "block";
+                break;
+
+              }
+            else
+              {
+                alert("You didn't get the number. Try again!");
+                if (number>guess)
+                {
+                  alert("Your guess is less than the random number!");
+                }
+                else
+                {
+                  alert("Your guess is more than the random number!");
+                }
+              }
+            }
+            }
+            </script>
+    </body>
+</html>
