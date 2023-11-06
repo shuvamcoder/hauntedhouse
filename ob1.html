@@ -5,9 +5,7 @@
       </head>
     <body>
         <h1> Solve this First Obstacle! </h1>
-        <p> 
-            Prepare to confront your first chilling challenge. Step into the foreboding obstacle ahead, where you must decipher a sinister puzzle to unlock your path forward.</p>
-        <div class="haunted house">
+        <div class="haunted_house">
           <img class=scary_house_img src="ob1_img.jpg"> 
           <p> Please hear out this instruction: </p>
           <audio src="audio2.mp3" controls> </audio>
@@ -20,7 +18,6 @@
             #myButton 
             {
             display: none; 
-            margin-left: 900px;
             background-color: yellow;
             color: white;
             }
@@ -37,7 +34,7 @@
             if (number === guess)
               {
                 alert("Congrulations! You got the random number!");
-                alert("Click OK to unlock the door! A blue button shall appear, which will ask you to head on to the next obstacle!");
+                alert("Click OK to unlock the door! A yellow button shall appear, which will ask you to enter the next obstacle!");
                 document.getElementById("myButton").style.display = "block";
                 break;
 

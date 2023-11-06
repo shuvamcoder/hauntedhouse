@@ -1,0 +1,71 @@
+<html> 
+    <head>
+        <title> Obstacle 2 </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+    <body>
+        <h1> Solve the Second Obstacle! </h1>
+         <div class="haunted_house">
+          <img class=scary_house_img src="ob2_img.jpg"> 
+          <p> Please hear out this instruction: </p>
+          <audio src="audio3.mp3" controls> </audio>
+        </div>
+        <br> <br>
+        <p> Put your choice your here. Type 0 for Rock, 1 for Paper, 2 for Scissors </p>
+        <input id="Tb" type="textbox">
+        <p id="giveitsomeid"> </p>
+        <button onclick="fun()" class="button1"> Click this button to begin your game! </button>
+        <br>
+        <button id="myButton" class="button1"><a href="ob3.html"> Click this button to begin the final obstacle! </a></button>
+        <style>
+            #myButton 
+            {
+            display: none; 
+            background-color: yellow;
+            color: white;
+            }
+        </style>
+        <br> <br>
+         <script>
+            function fun()
+            {
+                var userChoice = parseInt(document.getElementById("Tb").value);
+    var comChoice = Math.floor(Math.random()*2);
+  if (userChoice === comChoice)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You tied!";
+  }
+  else if (userChoice === 0 && comChoice=== 1)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You lost!";
+  }
+    else if (userChoice === 0 && comChoice=== 2)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You won!";
+    alert("You won! Click OK to unlock the door! A yellow button shall appear, which will ask you to enter the next obstacle!");
+                document.getElementById("myButton").style.display = "block";
+  }
+    else if (userChoice === 1 && comChoice=== 2)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You lost!";
+  }
+    else if (userChoice === 1 && comChoice=== 0)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You won!";
+    alert("You won! Click OK to unlock the door! A yellow button shall appear, which will ask you to enter the next obstacle!");
+                document.getElementById("myButton").style.display = "block";
+  }
+    else if (userChoice === 2 && comChoice=== 0)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You lost!";
+  }
+      else if (userChoice === 2 && comChoice=== 1)
+  {
+    document.getElementById("giveitsomeid").innerHTML="You won!";
+    alert("You won! Click OK to unlock the door! A yellow button shall appear, which will ask you to enter the next obstacle!");
+                document.getElementById("myButton").style.display = "block";
+  }
+            }
+            </script>
+    </body>
+</html>

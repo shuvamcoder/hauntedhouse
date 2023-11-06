@@ -1,0 +1,143 @@
+<html> 
+    <head>
+        <title> Obstacle 3 </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+    <body>
+        <h1> Solve the Final Obstacle! </h1>
+         <div class="haunted_house">
+          <p> Please hear out this instruction: </p>
+          <audio src="audio4.mp3" controls> </audio>
+        </div>
+        <br> <br>
+        <div class="objects_div">
+            <img id="image1" class="objects" src="ob3_1.jpg"> 
+            <img id="image2" class="objects" src="ob3_2.png"> 
+            <img id="image3" class="objects" src="ob3_3.png"> 
+            <img id="image4" class="objects" src="ob3_4.png"> 
+            <img id="image5" class="objects" src="ob3_5.jpg"> 
+        </div>
+        <div class="objects_div">
+            <input class="text" id="Tb1" type="textbox">
+            <input class="text" id="Tb2" type="textbox">
+            <input class="text" id="Tb3" type="textbox">
+            <input class="text" id="Tb4" type="textbox">
+            <input class="text" id="Tb5" type="textbox">
+        </div>
+        <p id="giveitsomeid"> </p>
+        <button onclick="fun()" id="tub1" class="button1"> Click this button if you are ready for the objects to dissapear! </button>
+        <br>
+        <button onclick="fun1()" id="tub2" class="button2"> Click this button if you are ready to guess! </button>
+        <br>
+        <button id= "myButton" class="button3"> <a href="escape.html"> Click this button to escape! </a></button>
+        <style>
+            #myButton 
+            {
+            display: none; 
+            background-color: yellow;
+            color: white;
+            text-align: center;
+            }
+            .objects_div
+            {
+                display: inline-flex;
+            }
+            #tub2
+            {
+                display: none;
+            }
+            .button2
+            {
+                border-radius: 15px;
+                width: 100px;
+                height: 100px;
+                text-decoration: none;
+                display: none; 
+                background-color: blue;
+                color: white;
+                margin-left: 700px;
+            }
+            .button3
+            {
+                border-radius: 15px;
+                width: 100px;
+                height: 100px;
+                text-decoration: none;
+                display: none; 
+                background-color: yellow;
+                color: white;
+                margin-left: 700px;
+            }
+        </style>
+        <br> <br>
+         <script>
+            function fun()
+            {   
+                document.getElementById("image1").style.display = "none";
+                document.getElementById("image2").style.display = "none";
+                document.getElementById("image3").style.display = "none";
+                document.getElementById("image4").style.display = "none";
+                document.getElementById("image5").style.display = "none";
+                document.getElementById("Tb1").style.display = "block";
+                document.getElementById("Tb2").style.display = "block";
+                document.getElementById("Tb3").style.display = "block";
+                document.getElementById("Tb4").style.display = "block";
+                document.getElementById("Tb5").style.display = "block";
+                document.getElementById("tub1").style.display = "none";
+                document.getElementById("tub2").style.display = "block";
+                alert("Type the objects you have seen! You may start! ");
+            }
+            function fun1()
+            {
+                var ans1 = "pumpkin";
+                var ans2 = "candy";
+                var ans3 = "ghost";
+                var ans4 = "cat";
+                var ans5 = "bat";
+                var textbox1 = document.getElementById("Tb1").value;
+                var textbox2 = document.getElementById("Tb2").value;
+                var textbox3 = document.getElementById("Tb3").value;
+                var textbox4 = document.getElementById("Tb4").value;
+                var textbox5 = document.getElementById("Tb5").value;
+                if (textbox1 === ans1)
+                {
+                    if (textbox2 === ans2) 
+                    {
+                        if (textbox3 === ans3)
+                        {
+                            if (textbox4 === ans4)
+                            {
+                                if (textbox5 === ans5)
+                                {
+                                    alert("Click the OK, and press the escape button to finally leave!")
+                                    document.getElementById("myButton").style.display = "block";
+                                }
+                                else 
+                                {
+                                document.getElementById("giveitsomeid").innerHTML="Try again!";
+                                } 
+                            }
+                            else 
+                            {
+                                document.getElementById("giveitsomeid").innerHTML="Try again!";
+                            }   
+                        }
+                        else 
+                        {
+                            document.getElementById("giveitsomeid").innerHTML="Try again!";
+                        }   
+                    }
+                    else 
+                    {
+                        document.getElementById("giveitsomeid").innerHTML="Try again!";
+                    }
+                }
+                else 
+                {
+                    document.getElementById("giveitsomeid").innerHTML="Try again!";
+                }
+            }
+            </script>
+            
+    </body>
+</html>
